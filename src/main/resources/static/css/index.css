@@ -1,16 +1,150 @@
-@charset "UTF-8";
-
-main{
-	background-color: #f7f3ec;
-	min-height: auto;
-
-
-.hero{
-	width: 100%;
+.hero {
+    width: 100%;
 }
 
-.hero img{
-	display: block;
-	width: 100%;
-	height: auto;
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.about-preview {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.section-title {
+    width: 320px;
+    flex-shrink: 0;
+	overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.about-preview__content {
+    flex: 1;
+    min-width: 0;
+
+	background-image: url("../image/Board.png");
+	background-repeat: no-repeat;
+	background-size: 120% 120%;
+	background-position: center;
+
+    padding: 100px 95px 85px 115px;
+
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: 500;
+    color: #2f2118;
+
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7),
+        0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.section-link {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.section-title-aboutpng {
+    width: 500px;
+	margin-left: -30px;
+	
+}
+
+.profile-title {
+    width: 340px;
+    max-width: 100%;
+    margin-top: -180px;
+	margin-left: 40px;
+}
+
+.read-more-button {
+    width: 400px;
+    display: block;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .about-preview {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        width: 100%;
+        align-items: center;
+    }
+
+    .section-title-aboutpng {
+        width: 220px;
+        margin-left: 0;
+    }
+
+    .profile-title {
+        width: 280px;
+        margin-top: -60px;
+        margin-left: 0;
+    }
+
+    .about-preview__content {
+        width: 100%;
+        max-width: 650px;
+
+        background-size: 100% 100%;
+        padding: 80px 70px;
+    }
+
+    .section-link {
+        width: auto;
+    }
+
+    .read-more-button {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .about-preview {
+        padding: 30px 12px;
+    }
+
+    .section-title-aboutpng {
+        width: 180px;
+    }
+
+    .profile-title {
+        width: 230px;
+        margin-top: -50px;
+    }
+
+    .about-preview__content {
+        padding: 65px 45px;
+
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .about-preview__content br {
+        display: none;
+    }
+
+    .read-more-button {
+        width: 220px;
+    }
 }
