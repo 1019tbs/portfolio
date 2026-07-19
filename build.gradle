@@ -19,6 +19,13 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+
+	// JSPを表示するために必要
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+	// JSTLを使用するために必要
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'

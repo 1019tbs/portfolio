@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+	pageEncoding="UTF-8"%>
+<header>
+	<div>
+		<a href="${pageContext.request.contextPath}/"> Homeへ</a>
+	</div>
 
-</body>
-</html>
+	<nav>
+		<ul>
+			<li><a href="${pageContext.request.contextPath}/about">About</a></li>
+			<li><a href="${pageContext.request.contextPath}/work">Work</a></li>
+			<li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
+		</ul>
+	</nav>
+</header>

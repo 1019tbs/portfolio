@@ -1,1 +1,40 @@
 @charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+}
+
+nav ul {
+	display: flex;
+	gap: 30px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+main{
+	min-height: 70vh;
+	padding: 40px;
+}
+
+footer{
+	padding: 20px;
+	text-align: center;
+}
