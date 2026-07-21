@@ -57,13 +57,62 @@
 					class="read-more-button"
 					src="${pageContext.request.contextPath}/image/ReadMore.png"
 					alt="Aboutページを詳しく見る">
-
 				</a>
 
 			</div>
 
 		</section>
 
+		<section class="work-preview">
+			<div class="work-preview__title">
+				<img class="work-preview__image"
+					src="${pageContext.request.contextPath}/image/Work.png" alt="Work">
+				<p class="work-preview__text">
+					これまでに制作した<br> アプリケーションやWebサイトを<br> 紹介します。
+				</p>
+				<a href="${pageContext.request.contextPath}/work"> <img
+					class="work-preview__button"
+					src="${pageContext.request.contextPath}/image/view-all.png"
+					alt="Workページを詳しく見る">
+				</a>
+			</div>
+			<div class="work-preview__list">
+				<!--			一旦Work.jspを作成後に中身を作成する予定。　-->
+			</div>
+		</section>
+		<section class="contact-preview">
+
+			<div class="contact-preview__title">
+				<img class="contact-preview__image"
+					src="${pageContext.request.contextPath }/image/Contact.png"
+					alt="Contact"
+			</div>
+
+			<div class="contact-previw__button">
+				<a href="https://github.com/1019tbs?tab=repositories"
+					target="_blank"><img class="contact-previw__icon"
+					src="${pageContext.request.contextPath}/image/GitHub.png"
+					alt="Git-hubのアイコン"</a>
+				<p class="contact-preview__textTitle">GitHub</p>
+				<p class="contact-preview__text">github.com/1019tbs</p>
+			</div>
+			<div class="contact-previw__button">
+				<a href="mailto:1019tbs@gmail.com"> <img
+					class="contact-previw__icon"
+					src="${pageContext.request.contextPath}/image/Email.png"
+					alt="E-mailのアイコン"</a>
+				<p class="contact-preview__textTitle">Email</p>
+				<p class="contact-preview__text">1019tbs@gmail.com</p>
+			</div>
+			<div class="contact-previw__button">
+				<a href="${pageContext.request.contextPath}/contact"> <img
+					class="contact-previw__icon"
+					src="${pageContext.request.contextPath}/image/form.png"
+					alt="お問い合わせフォームのアイコン"</a>
+				<p class="contact-preview__textTitle">お問い合わせフォーム</p>
+				<p class="contact-preview__text">フォームへ移動します。</p>
+			</div>
+		</section>
 	</main>
 
 	<jsp:include page="common/footer.jsp" />
