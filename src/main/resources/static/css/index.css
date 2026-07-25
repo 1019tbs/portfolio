@@ -18,6 +18,13 @@ body {
 	padding: 0;
 
 	background-color: #ffffff;
+
+	background-image: url("../image/indexBack.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+
 	color: #35271f;
 
 	font-family:

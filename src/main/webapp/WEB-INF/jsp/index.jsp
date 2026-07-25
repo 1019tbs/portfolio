@@ -8,6 +8,7 @@
 		<title>田伏佑多のPortfolio</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css">
+		<link rel="icon" type="image/png" href="${pageContext.request.contextPath}/image/favicon.png">
 	</head>
 
 	<body>

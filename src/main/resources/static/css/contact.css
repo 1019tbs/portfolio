@@ -1,1 +1,619 @@
 @charset "UTF-8";
+
+
+/* ========================================
+   基本設定
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+.contact-page {
+
+	width: 100%;
+	min-height: 100vh;
+
+	padding: 70px 20px 100px;
+
+	background-image:
+		linear-gradient(
+			rgba(255,255,255,0.75),
+			rgba(255,255,255,0.75)
+		),
+		url("../image/contactBack.png");
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+/* ========================================
+   Contactタイトル
+======================================== */
+
+.contact-heading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+	max-width: 900px;
+
+	margin: 0 auto 65px;
+
+	text-align: center;
+}
+
+.contact-heading__image {
+	display: block;
+
+	width: 330px;
+	max-width: 75%;
+	height: auto;
+
+	margin-bottom: 25px;
+}
+
+.contact-heading__text {
+	margin: 0;
+
+	color: #594a40;
+
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 2;
+	letter-spacing: 0.04em;
+}
+
+
+/* ========================================
+   連絡方法
+======================================== */
+
+.contact-methods {
+	width: 100%;
+	max-width: 1050px;
+
+	margin: 0 auto 75px;
+}
+
+.contact-methods__title {
+	margin: 0 0 30px;
+
+	color: #6d4e3d;
+
+	font-size: 25px;
+	text-align: center;
+	letter-spacing: 0.05em;
+}
+
+.contact-methods__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+
+	gap: 25px;
+}
+
+.contact-method-card {
+	display: flex;
+	align-items: center;
+
+	min-width: 0;
+	padding: 28px 32px;
+
+	background-color: rgba(255, 255, 255, 0.9);
+
+	border: 2px solid rgba(124, 92, 63, 0.12);
+	border-radius: 24px;
+
+	box-shadow:
+		0 10px 25px rgba(99, 75, 52, 0.09);
+
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		border-color 0.25s ease;
+}
+
+.contact-method-card:hover {
+	transform: translateY(-6px);
+
+	border-color: rgba(225, 103, 33, 0.35);
+
+	box-shadow:
+		0 16px 32px rgba(99, 75, 52, 0.15);
+}
+
+.contact-method-card__icon {
+	flex-shrink: 0;
+
+	width: 82px;
+	height: 82px;
+
+	margin-right: 25px;
+
+	object-fit: contain;
+}
+
+.contact-method-card__body {
+	min-width: 0;
+}
+
+.contact-method-card__title {
+	margin: 0 0 5px;
+
+	color: #45634a;
+
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.contact-method-card__text {
+	margin: 0;
+
+	color: #71655d;
+
+	font-size: 14px;
+
+	overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   お問い合わせフォーム全体
+======================================== */
+
+.contact-form-section {
+	width: 100%;
+	max-width: 950px;
+
+	margin: 0 auto;
+	padding: 55px 65px;
+
+	background-color: rgba(255, 255, 255, 0.94);
+
+	border: 2px solid rgba(124, 92, 63, 0.1);
+	border-radius: 32px;
+
+	box-shadow:
+		0 15px 40px rgba(93, 72, 49, 0.11);
+}
+
+.contact-form-section__heading {
+	display: flex;
+	align-items: center;
+
+	gap: 22px;
+
+	margin-bottom: 40px;
+	padding-bottom: 25px;
+
+	border-bottom: 2px dashed rgba(91, 123, 85, 0.24);
+}
+
+.contact-form-section__icon {
+	flex-shrink: 0;
+
+	width: 85px;
+	height: 85px;
+
+	object-fit: contain;
+}
+
+.contact-form-section__title {
+	margin: 0 0 5px;
+
+	color: #47634b;
+
+	font-size: 27px;
+}
+
+.contact-form-section__description {
+	margin: 0;
+
+	color: #746960;
+
+	font-size: 14px;
+}
+
+
+/* ========================================
+   メッセージ
+======================================== */
+
+.contact-message {
+	margin-bottom: 30px;
+	padding: 18px 22px;
+
+	border-radius: 12px;
+
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.7;
+}
+
+.contact-message--error {
+	background-color: #fff1f0;
+	border: 1px solid #e9aaa5;
+	color: #a63d36;
+}
+
+.contact-message--success {
+	background-color: #eef9ed;
+	border: 1px solid #9fc89a;
+	color: #356c36;
+}
+
+
+/* ========================================
+   フォーム
+======================================== */
+
+.contact-form {
+	width: 100%;
+}
+
+.contact-form__group {
+	margin-bottom: 28px;
+}
+
+.contact-form__label {
+	display: block;
+
+	margin-bottom: 9px;
+
+	color: #43382f;
+
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.contact-form__required {
+	display: inline-block;
+
+	margin-left: 8px;
+	padding: 2px 8px;
+
+	background-color: #e76524;
+	color: #ffffff;
+
+	border-radius: 20px;
+
+	font-size: 11px;
+	font-weight: 700;
+	vertical-align: middle;
+}
+
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+	display: block;
+
+	width: 100%;
+
+	background-color: #fffefa;
+	color: #3b322c;
+
+	border: 2px solid #dfd6cc;
+	border-radius: 12px;
+
+	font-family: inherit;
+	font-size: 15px;
+
+	outline: none;
+
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.contact-form__input,
+.contact-form__select {
+	height: 52px;
+	padding: 0 16px;
+}
+
+.contact-form__textarea {
+	min-height: 210px;
+	padding: 15px 16px;
+
+	line-height: 1.8;
+	resize: vertical;
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+	color: #aaa097;
+}
+
+.contact-form__input:focus,
+.contact-form__select:focus,
+.contact-form__textarea:focus {
+	background-color: #ffffff;
+	border-color: #71a577;
+
+	box-shadow:
+		0 0 0 4px rgba(113, 165, 119, 0.13);
+}
+
+.contact-form__note {
+	margin: 7px 0 0;
+
+	color: #867b72;
+
+	font-size: 12px;
+	text-align: right;
+}
+
+
+/* ========================================
+   チェックボックス
+======================================== */
+
+.contact-form__agreement {
+	margin: 10px 0 35px;
+	padding: 18px 20px;
+
+	background-color: #f6faf3;
+	border-radius: 12px;
+}
+
+.contact-form__checkbox-label {
+	display: flex;
+	align-items: flex-start;
+
+	gap: 12px;
+
+	color: #51483f;
+
+	font-size: 14px;
+	line-height: 1.7;
+
+	cursor: pointer;
+}
+
+.contact-form__checkbox {
+	flex-shrink: 0;
+
+	width: 19px;
+	height: 19px;
+
+	margin-top: 3px;
+
+	accent-color: #5e9565;
+	cursor: pointer;
+}
+
+
+/* ========================================
+   ボタン
+======================================== */
+
+.contact-form__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: 20px;
+}
+
+.contact-form__reset,
+.contact-form__submit {
+	min-width: 190px;
+	padding: 14px 28px;
+
+	border-radius: 50px;
+
+	font-family: inherit;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+
+	cursor: pointer;
+
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.contact-form__reset {
+	background-color: #ffffff;
+	color: #756960;
+
+	border: 2px solid #cfc5bb;
+}
+
+.contact-form__reset:hover {
+	transform: translateY(-3px);
+	background-color: #f7f4f1;
+}
+
+.contact-form__submit {
+	background-color: #e76524;
+	color: #ffffff;
+
+	border: 2px solid #e76524;
+
+	box-shadow:
+		0 7px 16px rgba(211, 84, 25, 0.24);
+}
+
+.contact-form__submit:hover {
+	transform: translateY(-3px);
+
+	background-color: #d95717;
+	border-color: #d95717;
+
+	box-shadow:
+		0 11px 22px rgba(211, 84, 25, 0.3);
+}
+
+
+/* ========================================
+   トップページへ戻る
+======================================== */
+
+.contact-page__back {
+	margin-top: 45px;
+	text-align: center;
+}
+
+.contact-page__back-link {
+	display: inline-block;
+
+	color: #55745a;
+
+	font-size: 15px;
+	font-weight: 700;
+
+	border-bottom: 2px solid transparent;
+
+	transition:
+		color 0.2s ease,
+		border-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.contact-page__back-link:hover {
+	color: #e76524;
+	border-color: #e76524;
+
+	transform: translateX(-4px);
+}
+
+
+/* ========================================
+   タブレット
+======================================== */
+
+@media screen and (max-width: 800px) {
+
+	.contact-page {
+		padding: 55px 20px 80px;
+	}
+
+	.contact-methods__list {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-form-section {
+		padding: 45px 35px;
+	}
+
+	.contact-form-section__heading {
+		align-items: flex-start;
+	}
+
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+	.contact-page {
+		padding:
+			40px
+			12px
+			65px;
+	}
+
+	.contact-heading {
+		margin-bottom: 45px;
+	}
+
+	.contact-heading__image {
+		width: 250px;
+		margin-bottom: 18px;
+	}
+
+	.contact-heading__text {
+		font-size: 14px;
+		line-height: 1.9;
+	}
+
+	.contact-heading__text br {
+		display: none;
+	}
+
+	.contact-methods {
+		margin-bottom: 50px;
+	}
+
+	.contact-methods__title {
+		font-size: 21px;
+	}
+
+	.contact-method-card {
+		padding: 22px 18px;
+		border-radius: 18px;
+	}
+
+	.contact-method-card__icon {
+		width: 62px;
+		height: 62px;
+		margin-right: 17px;
+	}
+
+	.contact-method-card__title {
+		font-size: 18px;
+	}
+
+	.contact-method-card__text {
+		font-size: 12px;
+	}
+
+	.contact-form-section {
+		padding: 35px 18px;
+
+		border-radius: 22px;
+	}
+
+	.contact-form-section__heading {
+		flex-direction: column;
+		align-items: center;
+
+		gap: 10px;
+
+		text-align: center;
+	}
+
+	.contact-form-section__icon {
+		width: 70px;
+		height: 70px;
+	}
+
+	.contact-form-section__title {
+		font-size: 22px;
+	}
+
+	.contact-form__input,
+	.contact-form__select {
+		height: 50px;
+		font-size: 14px;
+	}
+
+	.contact-form__textarea {
+		min-height: 190px;
+		font-size: 14px;
+	}
+
+	.contact-form__buttons {
+		flex-direction: column-reverse;
+		gap: 13px;
+	}
+
+	.contact-form__reset,
+	.contact-form__submit {
+		width: 100%;
+		min-width: 0;
+	}
+
+}
