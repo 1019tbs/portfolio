@@ -1,150 +1,766 @@
+@charset "UTF-8";
+
+
+/* ========================================
+   基本設定
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: #ffffff;
+	color: #35271f;
+
+	font-family:
+		"Yu Gothic",
+		"YuGothic",
+		"Meiryo",
+		sans-serif;
+
+	line-height: 1.8;
+}
+
+main {
+	width: 100%;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* ========================================
+   Hero
+======================================== */
+
 .hero {
-    width: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 720px;
+
+	object-fit: cover;
+	object-position: center;
 }
+
+
+/* ========================================
+   Aboutセクション全体
+======================================== */
 
 .about-preview {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+	display: grid;
 
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 60px 30px;
+	grid-template-columns:
+		minmax(230px, 290px)
+		minmax(680px, 820px)
+		minmax(190px, 250px);
+
+	align-items: center;
+	justify-content: center;
+
+	column-gap: 35px;
+
+	width: 100%;
+	max-width: 1540px;
+
+	margin: 0 auto;
+	padding: 80px 35px;
 }
+
+
+/* ========================================
+   About左側
+======================================== */
 
 .section-title {
-    width: 320px;
-    flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	min-width: 0;
+
 	overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-}
-
-.about-preview__content {
-    flex: 1;
-    min-width: 0;
-
-	background-image: url("../image/Board.png");
-	background-repeat: no-repeat;
-	background-size: 120% 120%;
-	background-position: center;
-
-    padding: 100px 95px 85px 115px;
-
-    font-size: 17px;
-    line-height: 1.9;
-    font-weight: 500;
-    color: #2f2118;
-
-    text-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.7),
-        0 0 3px rgba(255, 255, 255, 0.5);
-}
-
-.section-link {
-    width: 280px;
-    flex-shrink: 0;
 }
 
 .section-title-aboutpng {
-    width: 500px;
-	margin-left: -30px;
-	
+	display: block;
+
+	width: 290px;
+	max-width: none;
+	height: auto;
+
+	margin: 0;
 }
 
 .profile-title {
-    width: 340px;
-    max-width: 100%;
-    margin-top: -180px;
-	margin-left: 40px;
+	display: block;
+
+	width: 270px;
+	max-width: none;
+	height: auto;
+
+	/*
+	 * About画像の下へ
+	 * 自己紹介画像を少し重ねる
+	 */
+	margin-top: -55px;
+	margin-left: 25px;
+}
+
+
+/* ========================================
+   About中央
+   Board.png・本文
+======================================== */
+
+.about-preview__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 100%;
+	min-width: 0;
+	min-height: 440px;
+
+	margin: 0;
+
+	/*
+	 * 左側の花に文字が重ならないように
+	 * 左余白を大きくしています
+	 */
+	padding:
+		90px
+		100px
+		90px
+		125px;
+
+	/*
+	 * 1枚目のグラデーションをBoard.pngの上に重ね、
+	 * 文章の後ろを少し明るくしています
+	 */
+	background-image:
+		linear-gradient(
+			to right,
+			rgba(255, 248, 225, 0) 0%,
+			rgba(255, 248, 225, 0.35) 13%,
+			rgba(255, 248, 225, 0.62) 23%,
+			rgba(255, 248, 225, 0.52) 78%,
+			rgba(255, 248, 225, 0.12) 92%,
+			rgba(255, 248, 225, 0) 100%
+		),
+		url("../image/Board.png");
+
+	background-repeat:
+		no-repeat,
+		no-repeat;
+
+	background-position:
+		center,
+		center;
+
+	background-size:
+		100% 100%,
+		100% 100%;
+
+	color: #2c211b;
+
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.9;
+	letter-spacing: 0.015em;
+
+	text-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.95),
+		0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.about-preview__content p {
+	width: 100%;
+	max-width: 610px;
+
+	margin: 0;
+}
+
+.about-preview__content p + p {
+	margin-top: 22px;
+}
+
+
+/* ========================================
+   About右側
+   Read More
+======================================== */
+
+.section-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	min-width: 0;
+}
+
+.section-link a {
+	display: inline-block;
+
+	transition:
+		transform 0.25s ease,
+		filter 0.25s ease;
+}
+
+.section-link a:hover {
+	transform: translateY(-5px);
+	filter: brightness(1.08);
 }
 
 .read-more-button {
-    width: 400px;
-    display: block;
+	display: block;
+
+	width: 230px;
+	max-width: 100%;
+	height: auto;
 }
 
 
+/* ========================================
+   Workセクション
+======================================== */
 
-@media screen and (max-width: 900px) {
+.work-preview {
+	display: grid;
 
-    .about-preview {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+	grid-template-columns:
+		minmax(300px, 400px)
+		minmax(500px, 1fr);
 
-        padding: 40px 20px;
-    }
+	align-items: center;
 
-    .section-title {
-        width: 100%;
-        align-items: center;
-    }
+	gap: 70px;
 
-    .section-title-aboutpng {
-        width: 220px;
-        margin-left: 0;
-    }
+	width: calc(100% - 70px);
+	max-width: 1350px;
 
-    .profile-title {
-        width: 280px;
-        margin-top: -60px;
-        margin-left: 0;
-    }
+	margin: 20px auto 100px;
+	padding: 70px 80px;
 
-    .about-preview__content {
-        width: 100%;
-        max-width: 650px;
+	background-color: #f4faf4;
+	border-radius: 30px;
 
-        background-size: 100% 100%;
-        padding: 80px 70px;
-    }
-
-    .section-link {
-        width: auto;
-    }
-
-    .read-more-button {
-        width: 260px;
-    }
+	box-shadow:
+		0 12px 35px rgba(70, 110, 75, 0.1);
 }
+
+.work-preview__title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	text-align: center;
+}
+
+.work-preview__image {
+	width: 300px;
+	max-width: 100%;
+	height: auto;
+
+	margin-bottom: 25px;
+}
+
+.work-preview__text {
+	margin: 0;
+
+	color: #3d493d;
+
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 2;
+	letter-spacing: 0.04em;
+}
+
+.work-preview__title a {
+	display: inline-block;
+	margin-top: 30px;
+
+	transition:
+		transform 0.25s ease,
+		filter 0.25s ease;
+}
+
+.work-preview__title a:hover {
+	transform: translateY(-5px);
+	filter: brightness(1.06);
+}
+
+.work-preview__button {
+	display: block;
+
+	width: 220px;
+	max-width: 100%;
+	height: auto;
+}
+
+.work-preview__list {
+	width: 100%;
+	min-height: 330px;
+
+	background-color: rgba(255, 255, 255, 0.75);
+
+	border: 2px dashed rgba(82, 126, 85, 0.25);
+	border-radius: 25px;
+}
+
+
+/* ========================================
+   Contactセクション
+======================================== */
+
+.contact-preview {
+	width: calc(100% - 70px);
+	max-width: 1350px;
+
+	margin: 0 auto 100px;
+	padding: 70px 65px;
+
+	background-color: #fff8ed;
+	border-radius: 30px;
+
+	box-shadow:
+		0 12px 35px rgba(126, 93, 58, 0.1);
+}
+
+.contact-preview__title {
+	display: flex;
+	justify-content: center;
+
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.contact-preview__image {
+	width: 320px;
+	max-width: 75%;
+	height: auto;
+}
+
+.contact-preview__buttons {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+
+	gap: 28px;
+}
+
+.contact-preview__button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	min-width: 0;
+	padding: 35px 20px;
+
+	background-color: #ffffff;
+
+	border: 1px solid rgba(115, 91, 66, 0.12);
+	border-radius: 24px;
+
+	text-align: center;
+
+	box-shadow:
+		0 8px 22px rgba(107, 83, 56, 0.08);
+
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.contact-preview__button:hover {
+	transform: translateY(-7px);
+
+	box-shadow:
+		0 15px 30px rgba(107, 83, 56, 0.15);
+}
+
+.contact-preview__button a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 120px;
+	height: 120px;
+
+	margin-bottom: 20px;
+
+	background-color: #f3faf1;
+	border-radius: 50%;
+
+	transition:
+		transform 0.25s ease,
+		background-color 0.25s ease;
+}
+
+.contact-preview__button a:hover {
+	transform: scale(1.06);
+	background-color: #e4f4e1;
+}
+
+.contact-preview__icon {
+	display: block;
+
+	width: 72px;
+	height: 72px;
+
+	object-fit: contain;
+}
+
+.contact-preview__textTitle {
+	margin: 0;
+
+	color: #47624b;
+
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.contact-preview__text {
+	width: 100%;
+	margin: 8px 0 0;
+
+	color: #6e655e;
+
+	font-size: 14px;
+	overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   少し狭いPC
+======================================== */
+
+@media screen and (max-width: 1300px) {
+
+	.about-preview {
+		grid-template-columns:
+			220px
+			minmax(580px, 700px)
+			190px;
+
+		column-gap: 20px;
+
+		padding: 65px 20px;
+	}
+
+	.section-title-aboutpng {
+		width: 250px;
+	}
+
+	.profile-title {
+		width: 225px;
+
+		margin-top: -45px;
+		margin-left: 20px;
+	}
+
+	.about-preview__content {
+		min-height: 420px;
+
+		padding:
+			82px
+			80px
+			80px
+			105px;
+
+		font-size: 13px;
+	}
+
+	.read-more-button {
+		width: 195px;
+	}
+
+	.work-preview,
+	.contact-preview {
+		width: calc(100% - 40px);
+	}
+}
+
+
+/* ========================================
+   タブレット
+======================================== */
+
+@media screen and (max-width: 1000px) {
+
+	.about-preview {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: 20px;
+
+		padding: 55px 20px;
+	}
+
+	.section-title {
+		width: 100%;
+		max-width: 400px;
+	}
+
+	.section-title-aboutpng {
+		width: 280px;
+		max-width: 85%;
+	}
+
+	.profile-title {
+		width: 245px;
+		max-width: 78%;
+
+		margin-top: -50px;
+		margin-left: 25px;
+	}
+
+	.about-preview__content {
+		width: 100%;
+		max-width: 760px;
+		min-height: 440px;
+
+		padding:
+			90px
+			90px
+			85px
+			115px;
+
+		font-size: 14px;
+	}
+
+	.section-link {
+		width: auto;
+	}
+
+	.read-more-button {
+		width: 235px;
+	}
+
+	.work-preview {
+		grid-template-columns: 1fr;
+
+		gap: 40px;
+
+		padding: 55px 40px;
+	}
+
+	.work-preview__list {
+		min-height: 260px;
+	}
+
+	.contact-preview {
+		padding: 55px 35px;
+	}
+
+	.contact-preview__buttons {
+		grid-template-columns: 1fr;
+
+		max-width: 560px;
+		margin: 0 auto;
+	}
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
 
 @media screen and (max-width: 600px) {
 
-    .about-preview {
-        padding: 30px 12px;
-    }
+	.hero img {
+		min-height: 250px;
+		object-fit: cover;
+	}
 
-    .section-title-aboutpng {
-        width: 180px;
-    }
+	.about-preview {
+		gap: 15px;
 
-    .profile-title {
-        width: 230px;
-        margin-top: -50px;
-    }
+		padding:
+			40px
+			8px
+			50px;
+	}
 
-    .about-preview__content {
-        padding: 65px 45px;
+	.section-title {
+		max-width: 310px;
+	}
 
-        font-size: 14px;
-        line-height: 1.8;
-    }
+	.section-title-aboutpng {
+		width: 220px;
+	}
 
-    .about-preview__content br {
-        display: none;
-    }
+	.profile-title {
+		width: 190px;
 
-    .read-more-button {
-        width: 220px;
-    }
+		margin-top: -38px;
+		margin-left: 18px;
+	}
+
+	.about-preview__content {
+		width: 100%;
+		max-width: 470px;
+		min-height: 430px;
+
+		padding:
+			75px
+			43px
+			68px
+			55px;
+
+		background-image:
+			linear-gradient(
+				to right,
+				rgba(255, 248, 225, 0.15),
+				rgba(255, 248, 225, 0.65) 20%,
+				rgba(255, 248, 225, 0.55) 80%,
+				rgba(255, 248, 225, 0.1)
+			),
+			url("../image/Board.png");
+
+		font-size: 12px;
+		line-height: 1.75;
+		letter-spacing: 0;
+	}
+
+	.about-preview__content p {
+		max-width: none;
+	}
+
+	.about-preview__content p + p {
+		margin-top: 15px;
+	}
+
+	.about-preview__content br {
+		display: none;
+	}
+
+	.read-more-button {
+		width: 205px;
+	}
+
+	.work-preview,
+	.contact-preview {
+		width: calc(100% - 24px);
+
+		margin-bottom: 60px;
+		padding: 40px 18px;
+
+		border-radius: 22px;
+	}
+
+	.work-preview {
+		gap: 30px;
+	}
+
+	.work-preview__image {
+		width: 235px;
+	}
+
+	.work-preview__text {
+		font-size: 15px;
+	}
+
+	.work-preview__button {
+		width: 190px;
+	}
+
+	.work-preview__list {
+		min-height: 200px;
+	}
+
+	.contact-preview__title {
+		margin-bottom: 32px;
+	}
+
+	.contact-preview__image {
+		width: 250px;
+	}
+
+	.contact-preview__buttons {
+		gap: 18px;
+	}
+
+	.contact-preview__button {
+		padding: 27px 15px;
+		border-radius: 19px;
+	}
+
+	.contact-preview__button a {
+		width: 95px;
+		height: 95px;
+	}
+
+	.contact-preview__icon {
+		width: 58px;
+		height: 58px;
+	}
+
+	.contact-preview__textTitle {
+		font-size: 18px;
+	}
+
+	.contact-preview__text {
+		font-size: 13px;
+	}
+}
+
+
+/* ========================================
+   小さいスマートフォン
+======================================== */
+
+@media screen and (max-width: 400px) {
+
+	.section-title-aboutpng {
+		width: 195px;
+	}
+
+	.profile-title {
+		width: 165px;
+	}
+
+	.about-preview__content {
+		min-height: 450px;
+
+		padding:
+			67px
+			35px
+			58px
+			43px;
+
+		font-size: 11px;
+		line-height: 1.72;
+	}
+
+	.read-more-button {
+		width: 185px;
+	}
 }

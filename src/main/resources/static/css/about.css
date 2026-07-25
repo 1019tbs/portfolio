@@ -1,1 +1,282 @@
 @charset "UTF-8";
+
+/* --------------------
+   Aboutページ全体
+-------------------- */
+
+.about-page{
+
+	max-width:1200px;
+	margin:0 auto;
+	padding:60px 20px 100px;
+
+}
+
+/* --------------------
+   タイトル
+-------------------- */
+
+.about-page__title{
+
+	text-align:center;
+	margin-bottom:80px;
+
+}
+
+.about-page__title-image{
+
+	width:350px;
+	max-width:100%;
+
+}
+
+/* --------------------
+   自己紹介
+-------------------- */
+
+.about-profile{
+
+	display:flex;
+	align-items:center;
+	gap:50px;
+
+	margin-bottom:120px;
+
+}
+
+.about-profile__image-area{
+
+	flex:1;
+	text-align:center;
+
+}
+
+.about-profile__image{
+
+	width:320px;
+	height:320px;
+
+	object-fit:cover;
+
+	border-radius:20px;
+
+	box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+.about-profile__content{
+
+	flex:2;
+
+}
+
+.about-profile__title{
+
+	font-size:36px;
+	margin-bottom:30px;
+	color:#3d6f3d;
+
+}
+
+.about-profile__text{
+
+	line-height:2;
+	font-size:18px;
+
+}
+
+/* --------------------
+   趣味
+-------------------- */
+
+.about-hobby__main-title{
+
+	text-align:center;
+	font-size:42px;
+
+	margin-bottom:70px;
+
+	color:#3d6f3d;
+
+}
+
+.about-hobby__item{
+
+	display:flex;
+
+	align-items:center;
+
+	gap:50px;
+
+	margin-bottom:100px;
+
+}
+
+.about-hobby__item--reverse{
+
+	flex-direction:row-reverse;
+
+}
+
+.about-hobby__image-area{
+
+	flex:1;
+
+	text-align:center;
+
+}
+
+.about-hobby__image{
+
+	width:350px;
+
+	max-width:100%;
+
+	border-radius:20px;
+
+	box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+.about-hobby__content{
+
+	flex:2;
+
+}
+
+.about-hobby__title{
+
+	font-size:30px;
+
+	margin-bottom:25px;
+
+	color:#3d6f3d;
+
+}
+
+.about-hobby__text{
+
+	font-size:18px;
+
+	line-height:2;
+
+}
+
+/* --------------------
+   YouTube
+-------------------- */
+
+.about-hobby__youtube-link{
+
+	display:inline-block;
+
+	margin-top:30px;
+
+	padding:15px 35px;
+
+	background:#e62117;
+
+	color:white;
+
+	text-decoration:none;
+
+	border-radius:50px;
+
+	font-size:18px;
+
+	font-weight:bold;
+
+	transition:.3s;
+
+}
+
+.about-hobby__youtube-link:hover{
+
+	background:#c90d00;
+
+	transform:translateY(-3px);
+
+}
+
+/* --------------------
+   スマホ対応
+-------------------- */
+
+@media screen and (max-width:900px){
+
+	.about-profile{
+
+		flex-direction:column;
+
+		text-align:center;
+
+	}
+
+	.about-hobby__item{
+
+		flex-direction:column;
+
+		text-align:center;
+
+	}
+
+	.about-hobby__item--reverse{
+
+		flex-direction:column;
+
+	}
+
+	.about-profile__image{
+
+		width:250px;
+
+		height:250px;
+
+	}
+
+	.about-hobby__image{
+
+		width:280px;
+
+	}
+
+	.about-profile__title{
+
+		font-size:30px;
+
+	}
+
+	.about-hobby__main-title{
+
+		font-size:34px;
+
+	}
+
+	.about-hobby__title{
+
+		font-size:26px;
+
+	}
+
+	.about-profile__text,
+	.about-hobby__text{
+
+		font-size:16px;
+
+		line-height:1.8;
+
+	}
+	.about-hobby__youtube {
+	    width: 100%;
+	    max-width: 700px;
+	    margin: 20px auto;
+	}
+
+	.about-hobby__youtube iframe {
+	    width: 100%;
+	    aspect-ratio: 16 / 9;
+	    height: auto;
+	    border-radius: 10px;
+	}
+
+}
