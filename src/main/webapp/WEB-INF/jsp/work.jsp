@@ -51,7 +51,7 @@
 
 					<div class="work-card__image-area">
 
-						<img src="${pageContext.request.contextPath}/image/todolist.png" alt="TodoListアプリの画面"
+						<img src="${pageContext.request.contextPath}/image/TODOLIST.png" alt="TodoListアプリの画面"
 							class="work-card__image">
 
 					</div>
@@ -432,7 +432,7 @@
 							TEAM DEVELOPMENT
 						</p>
 
-						<img src="${pageContext.request.contextPath}/image/groupb.png" alt="Honey Bloomチーム開発の画面"
+						<img src="${pageContext.request.contextPath}/image/GropB.png" alt="Honey Bloomチーム開発の画面"
 							class="work-card__image">
 
 					</div>
