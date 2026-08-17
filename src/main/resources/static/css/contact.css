@@ -10,7 +10,6 @@
 }
 
 .contact-page {
-
 	width: 100%;
 	min-height: 100vh;
 
@@ -18,8 +17,8 @@
 
 	background-image:
 		linear-gradient(
-			rgba(255,255,255,0.75),
-			rgba(255,255,255,0.75)
+			rgba(255, 255, 255, 0.75),
+			rgba(255, 255, 255, 0.75)
 		),
 		url("../image/contactBack.png");
 
@@ -102,6 +101,7 @@
 	align-items: center;
 
 	min-width: 0;
+
 	padding: 28px 32px;
 
 	background-color: rgba(255, 255, 255, 0.9);
@@ -237,13 +237,17 @@
 
 .contact-message--error {
 	background-color: #fff1f0;
+
 	border: 1px solid #e9aaa5;
+
 	color: #a63d36;
 }
 
 .contact-message--success {
 	background-color: #eef9ed;
+
 	border: 1px solid #9fc89a;
+
 	color: #356c36;
 }
 
@@ -287,6 +291,11 @@
 	vertical-align: middle;
 }
 
+
+/* ========================================
+   入力欄
+======================================== */
+
 .contact-form__input,
 .contact-form__select,
 .contact-form__textarea {
@@ -314,14 +323,17 @@
 .contact-form__input,
 .contact-form__select {
 	height: 52px;
+
 	padding: 0 16px;
 }
 
 .contact-form__textarea {
 	min-height: 210px;
+
 	padding: 15px 16px;
 
 	line-height: 1.8;
+
 	resize: vertical;
 }
 
@@ -334,6 +346,7 @@
 .contact-form__select:focus,
 .contact-form__textarea:focus {
 	background-color: #ffffff;
+
 	border-color: #71a577;
 
 	box-shadow:
@@ -359,6 +372,7 @@
 	padding: 18px 20px;
 
 	background-color: #f6faf3;
+
 	border-radius: 12px;
 }
 
@@ -385,12 +399,13 @@
 	margin-top: 3px;
 
 	accent-color: #5e9565;
+
 	cursor: pointer;
 }
 
 
 /* ========================================
-   ボタン
+   フォームボタン
 ======================================== */
 
 .contact-form__buttons {
@@ -404,6 +419,7 @@
 .contact-form__reset,
 .contact-form__submit {
 	min-width: 190px;
+
 	padding: 14px 28px;
 
 	border-radius: 50px;
@@ -430,6 +446,7 @@
 
 .contact-form__reset:hover {
 	transform: translateY(-3px);
+
 	background-color: #f7f4f1;
 }
 
@@ -447,6 +464,7 @@
 	transform: translateY(-3px);
 
 	background-color: #d95717;
+
 	border-color: #d95717;
 
 	box-shadow:
@@ -460,6 +478,7 @@
 
 .contact-page__back {
 	margin-top: 45px;
+
 	text-align: center;
 }
 
@@ -481,6 +500,7 @@
 
 .contact-page__back-link:hover {
 	color: #e76524;
+
 	border-color: #e76524;
 
 	transform: translateX(-4px);
@@ -488,7 +508,205 @@
 
 
 /* ========================================
+   お問い合わせ完了画面
+======================================== */
+
+.contact-thankyou {
+	width: 100%;
+	max-width: 900px;
+
+	margin: 0 auto 80px;
+	padding: 0 20px;
+}
+
+
+/* ========================================
+   Thankyou 鳥画像
+======================================== */
+
+.contact-thankyou__images {
+	display: flex;
+	justify-content: center;
+
+	position: relative;
+	z-index: 2;
+
+	width: 100%;
+
+	margin-top: 50px;
+	margin-bottom: -25px;
+}
+
+.contact-thankyou__images img {
+	width: min(300px, 70vw);
+	height: auto;
+
+	opacity: 0;
+
+	transform:
+		translateY(-40px)
+		scale(0.9);
+
+	transition:
+		opacity 1s ease,
+		transform 1.2s ease;
+}
+
+
+/* JS：鳥を表示 */
+
+.contact-thankyou__images.is-visible img {
+	opacity: 1;
+
+	transform:
+		translateY(0)
+		scale(1);
+}
+
+
+/* JS：鳥をふわふわ動かす */
+
+.contact-thankyou__images.is-floating img {
+	animation:
+		thankyouBirdFloat
+		3s
+		ease-in-out
+		infinite;
+}
+
+@keyframes thankyouBirdFloat {
+
+	0% {
+		transform:
+			translateY(0)
+			rotate(-1deg);
+	}
+
+	50% {
+		transform:
+			translateY(-12px)
+			rotate(1deg);
+	}
+
+	100% {
+		transform:
+			translateY(0)
+			rotate(-1deg);
+	}
+
+}
+
+
+/* ========================================
+   Thankyou メッセージボックス
+======================================== */
+
+.contact-thankyou__box {
+	padding: 70px 40px 60px;
+
+	background-color: rgba(255, 255, 255, 0.92);
+
+	border: 2px solid #d8cdbd;
+	border-radius: 24px;
+
+	text-align: center;
+
+	box-shadow:
+		0 8px 25px rgba(80, 60, 40, 0.12);
+
+	opacity: 0;
+
+	transform: translateY(30px);
+
+	transition:
+		opacity 0.9s ease,
+		transform 0.9s ease;
+}
+
+
+/* JS：メッセージボックスを表示 */
+
+.contact-thankyou__box.is-visible {
+	opacity: 1;
+
+	transform: translateY(0);
+}
+
+
+/* ========================================
+   Thankyou タイトル
+======================================== */
+
+.contact-thankyou__title {
+	margin: 0 0 35px;
+
+	color: #3e5d4d;
+
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+
+
+/* ========================================
+   Thankyou 文章
+======================================== */
+
+.contact-thankyou__message {
+	margin: 0 0 25px;
+
+	color: #5c5148;
+
+	font-size: 17px;
+	line-height: 2;
+}
+
+
+/* ========================================
+   Thankyou ボタン
+======================================== */
+
+.contact-thankyou__buttons {
+	margin-top: 45px;
+}
+
+.contact-thankyou__button {
+	display: inline-block;
+
+	padding: 14px 38px;
+
+	background-color: #5f7d68;
+	color: #ffffff;
+
+	border-radius: 30px;
+
+	font-size: 16px;
+	font-weight: bold;
+
+	text-decoration: none;
+
+	box-shadow:
+		0 5px 12px rgba(60, 80, 60, 0.15);
+
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.contact-thankyou__button:hover {
+	background-color: #486252;
+
+	transform: translateY(-3px);
+
+	box-shadow:
+		0 8px 18px rgba(60, 80, 60, 0.2);
+}
+
+
+/* ========================================
    タブレット
+   800px以下
 ======================================== */
 
 @media screen and (max-width: 800px) {
@@ -497,9 +715,15 @@
 		padding: 55px 20px 80px;
 	}
 
+
+	/* 連絡方法 */
+
 	.contact-methods__list {
 		grid-template-columns: 1fr;
 	}
+
+
+	/* お問い合わせフォーム */
 
 	.contact-form-section {
 		padding: 45px 35px;
@@ -509,21 +733,50 @@
 		align-items: flex-start;
 	}
 
+
+	/* Thankyou */
+
+	.contact-thankyou__images {
+		margin-top: 30px;
+		margin-bottom: -15px;
+	}
+
+	.contact-thankyou__images img {
+		width: min(230px, 70vw);
+	}
+
+	.contact-thankyou {
+		margin-bottom: 50px;
+	}
+
+	.contact-thankyou__box {
+		padding: 55px 20px 45px;
+	}
+
+	.contact-thankyou__title {
+		font-size: 24px;
+	}
+
+	.contact-thankyou__message {
+		font-size: 15px;
+	}
+
 }
 
 
 /* ========================================
    スマートフォン
+   600px以下
 ======================================== */
 
 @media screen and (max-width: 600px) {
 
 	.contact-page {
-		padding:
-			40px
-			12px
-			65px;
+		padding: 40px 12px 65px;
 	}
+
+
+	/* Contactタイトル */
 
 	.contact-heading {
 		margin-bottom: 45px;
@@ -531,6 +784,7 @@
 
 	.contact-heading__image {
 		width: 250px;
+
 		margin-bottom: 18px;
 	}
 
@@ -543,6 +797,9 @@
 		display: none;
 	}
 
+
+	/* 連絡方法 */
+
 	.contact-methods {
 		margin-bottom: 50px;
 	}
@@ -553,12 +810,14 @@
 
 	.contact-method-card {
 		padding: 22px 18px;
+
 		border-radius: 18px;
 	}
 
 	.contact-method-card__icon {
 		width: 62px;
 		height: 62px;
+
 		margin-right: 17px;
 	}
 
@@ -569,6 +828,9 @@
 	.contact-method-card__text {
 		font-size: 12px;
 	}
+
+
+	/* お問い合わせフォーム */
 
 	.contact-form-section {
 		padding: 35px 18px;
@@ -594,19 +856,28 @@
 		font-size: 22px;
 	}
 
+
+	/* 入力欄 */
+
 	.contact-form__input,
 	.contact-form__select {
 		height: 50px;
+
 		font-size: 14px;
 	}
 
 	.contact-form__textarea {
 		min-height: 190px;
+
 		font-size: 14px;
 	}
 
+
+	/* フォームボタン */
+
 	.contact-form__buttons {
 		flex-direction: column-reverse;
+
 		gap: 13px;
 	}
 
@@ -614,6 +885,18 @@
 	.contact-form__submit {
 		width: 100%;
 		min-width: 0;
+	}
+
+
+	/* Thankyou */
+
+	.contact-thankyou {
+		margin-bottom: 50px;
+		padding: 0 10px;
+	}
+
+	.contact-thankyou__box {
+		padding: 50px 20px;
 	}
 
 }

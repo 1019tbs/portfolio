@@ -20,11 +20,11 @@ public class ContactController {
 
 		this.contactMessageDAO = contactMessageDAO;
 	}
+	
+	@GetMapping("/contact_Thankyou")
+	public String showContactThankyou() {
 
-	@GetMapping("/contact")
-	public String showContact() {
-
-		return "contact";
+		return "contact_Thankyou";
 	}
 
 	@PostMapping("/contact/submit")
@@ -134,7 +134,7 @@ public class ContactController {
 				"successMsg",
 				"お問い合わせを送信しました。ありがとうございます。");
 
-		return "redirect:/contact";
+		return "redirect:/contact_Thankyou";
 	}
 
 	private void setFormValues(

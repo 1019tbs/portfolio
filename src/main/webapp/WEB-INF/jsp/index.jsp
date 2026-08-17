@@ -168,6 +168,21 @@
 			</div>
 
 		</section>
+				</section>
+
+		<!-- 管理者画面へのリンク -->
+		<section class="admin-preview">
+
+			<a href="${pageContext.request.contextPath}/admin/login"
+				class="admin-preview__link">
+
+				<img class="admin-preview__icon"
+					src="${pageContext.request.contextPath}/image/admin_icon.png"
+					alt="管理者画面">
+
+			</a>
+
+		</section>
 	</main>
 
 	<jsp:include page="common/footer.jsp" />

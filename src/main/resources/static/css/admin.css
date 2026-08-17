@@ -1,0 +1,635 @@
+@charset "UTF-8";
+
+
+/* ========================================
+   管理者ログインページ
+======================================== */
+
+.admin-login-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	min-height: 100vh;
+
+	padding: 70px 20px 100px;
+
+	background-image:
+		linear-gradient(
+			rgba(255, 255, 255, 0.75),
+			rgba(255, 255, 255, 0.75)
+		),
+		url("../image/contactBack.png");
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+/* ========================================
+   ログイン全体
+======================================== */
+
+.admin-login {
+	width: 100%;
+	max-width: 650px;
+
+	text-align: center;
+}
+
+
+/* ========================================
+   管理者アイコン
+======================================== */
+
+.admin-login__icon-area {
+	display: flex;
+	justify-content: center;
+
+	margin-bottom: -25px;
+
+	position: relative;
+	z-index: 2;
+}
+
+.admin-login__icon {
+	display: block;
+
+	width: 120px;
+	max-width: 40%;
+	height: auto;
+}
+
+
+/* ========================================
+   ログインボックス
+======================================== */
+
+.admin-login__box {
+	padding: 70px 60px 55px;
+
+	background-color: rgba(255, 255, 255, 0.94);
+
+	border: 2px solid rgba(124, 92, 63, 0.12);
+	border-radius: 28px;
+
+	box-shadow:
+		0 15px 40px rgba(93, 72, 49, 0.12);
+}
+
+
+/* ========================================
+   タイトル
+======================================== */
+
+.admin-login__title {
+	margin: 0 0 12px;
+
+	color: #47634b;
+
+	font-size: 30px;
+
+	letter-spacing: 0.05em;
+}
+
+.admin-login__description {
+	margin: 0 0 35px;
+
+	color: #746960;
+
+	font-size: 14px;
+}
+
+
+/* ========================================
+   エラーメッセージ
+======================================== */
+
+.admin-login__error {
+	margin-bottom: 25px;
+	padding: 15px 18px;
+
+	background-color: #fff1f0;
+
+	border: 1px solid #e9aaa5;
+	border-radius: 12px;
+
+	color: #a63d36;
+
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+/* ========================================
+   フォーム
+======================================== */
+
+.admin-login__form {
+	width: 100%;
+}
+
+.admin-login__group {
+	margin-bottom: 25px;
+
+	text-align: left;
+}
+
+.admin-login__label {
+	display: block;
+
+	margin-bottom: 8px;
+
+	color: #43382f;
+
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.admin-login__input {
+	display: block;
+
+	width: 100%;
+	height: 52px;
+
+	padding: 0 16px;
+
+	background-color: #fffefa;
+	color: #3b322c;
+
+	border: 2px solid #dfd6cc;
+	border-radius: 12px;
+
+	font-family: inherit;
+	font-size: 15px;
+
+	outline: none;
+
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.admin-login__input:focus {
+	border-color: #71a577;
+
+	box-shadow:
+		0 0 0 4px rgba(113, 165, 119, 0.13);
+}
+
+
+/* ========================================
+   ログインボタン
+======================================== */
+
+.admin-login__buttons {
+	margin-top: 35px;
+}
+
+.admin-login__submit {
+	min-width: 200px;
+
+	padding: 14px 35px;
+
+	background-color: #5f7d68;
+	color: #ffffff;
+
+	border: none;
+	border-radius: 50px;
+
+	font-family: inherit;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+
+	cursor: pointer;
+
+	box-shadow:
+		0 7px 16px rgba(60, 80, 60, 0.2);
+
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.admin-login__submit:hover {
+	transform: translateY(-3px);
+
+	background-color: #486252;
+
+	box-shadow:
+		0 11px 22px rgba(60, 80, 60, 0.25);
+}
+
+
+/* ========================================
+   トップへ戻る
+======================================== */
+
+.admin-login__back {
+	margin-top: 35px;
+}
+
+.admin-login__back-link {
+	display: inline-block;
+
+	color: #55745a;
+
+	font-size: 14px;
+	font-weight: 700;
+
+	text-decoration: none;
+
+	transition:
+		color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.admin-login__back-link:hover {
+	color: #e76524;
+
+	transform: translateX(-4px);
+}
+
+/* ========================================
+   お問い合わせ一覧画面
+======================================== */
+
+.admin-contact-page {
+	width: 100%;
+	min-height: 100vh;
+
+	padding: 70px 20px 100px;
+
+	background-image:
+		linear-gradient(
+			rgba(255, 255, 255, 0.75),
+			rgba(255, 255, 255, 0.75)
+		),
+		url("../image/contactBack.png");
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.admin-contact {
+	width: 100%;
+	max-width: 1000px;
+
+	margin: 0 auto;
+}
+
+
+/* ========================================
+   タイトル
+======================================== */
+
+.admin-contact__heading {
+	display: flex;
+	align-items: center;
+
+	gap: 20px;
+
+	margin-bottom: 40px;
+	padding: 30px 35px;
+
+	background-color: rgba(255, 255, 255, 0.94);
+
+	border-radius: 24px;
+
+	box-shadow:
+		0 10px 30px rgba(80, 60, 40, 0.1);
+}
+
+.admin-contact__icon {
+	width: 80px;
+	height: 80px;
+
+	object-fit: contain;
+}
+
+.admin-contact__title {
+	margin: 0 0 7px;
+
+	color: #47634b;
+
+	font-size: 28px;
+}
+
+.admin-contact__description {
+	margin: 0;
+
+	color: #746960;
+
+	font-size: 14px;
+}
+
+
+/* ========================================
+   お問い合わせなし
+======================================== */
+
+.admin-contact__empty {
+	padding: 50px 30px;
+
+	background-color: rgba(255, 255, 255, 0.94);
+
+	border-radius: 24px;
+
+	text-align: center;
+
+	color: #746960;
+
+	box-shadow:
+		0 10px 30px rgba(80, 60, 40, 0.1);
+}
+
+
+/* ========================================
+   一覧
+======================================== */
+
+.admin-contact__list {
+	display: flex;
+	flex-direction: column;
+
+	gap: 25px;
+}
+
+
+/* ========================================
+   お問い合わせカード
+======================================== */
+
+.admin-contact-card {
+	padding: 30px 35px;
+
+	background-color: rgba(255, 255, 255, 0.96);
+
+	border: 2px solid rgba(124, 92, 63, 0.1);
+	border-radius: 24px;
+
+	box-shadow:
+		0 10px 30px rgba(80, 60, 40, 0.1);
+}
+
+.admin-contact-card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	gap: 20px;
+
+	margin-bottom: 25px;
+	padding-bottom: 18px;
+
+	border-bottom: 2px dashed rgba(91, 123, 85, 0.2);
+}
+
+.admin-contact-card__subject {
+	margin: 0;
+
+	color: #3e5d4d;
+
+	font-size: 21px;
+}
+
+.admin-contact-card__category {
+	flex-shrink: 0;
+
+	padding: 6px 13px;
+
+	background-color: #eef6eb;
+	color: #55745a;
+
+	border-radius: 20px;
+
+	font-size: 12px;
+	font-weight: 700;
+}
+
+
+/* ========================================
+   基本情報
+======================================== */
+
+.admin-contact-card__info {
+	margin-bottom: 25px;
+}
+
+.admin-contact-card__row {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+
+	gap: 15px;
+
+	margin-bottom: 10px;
+}
+
+.admin-contact-card__label {
+	color: #746960;
+
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.admin-contact-card__value {
+	color: #43382f;
+
+	font-size: 14px;
+
+	overflow-wrap: anywhere;
+}
+
+.admin-contact-card__value a {
+	color: #55745a;
+
+	text-decoration: underline;
+}
+
+
+/* ========================================
+   お問い合わせ内容
+======================================== */
+
+.admin-contact-card__message {
+	padding: 20px;
+
+	background-color: #faf8f4;
+
+	border-radius: 14px;
+}
+
+.admin-contact-card__message-title {
+	margin: 0 0 10px;
+
+	color: #746960;
+
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.admin-contact-card__message-text {
+	margin: 0;
+
+	color: #43382f;
+
+	font-size: 14px;
+	line-height: 1.9;
+
+	white-space: pre-wrap;
+}
+
+
+/* ========================================
+   管理者画面ボタン
+======================================== */
+
+.admin-contact__buttons {
+	display: flex;
+	justify-content: center;
+
+	gap: 20px;
+
+	margin-top: 45px;
+}
+
+.admin-contact__home,
+.admin-contact__logout {
+	display: inline-block;
+
+	min-width: 170px;
+
+	padding: 13px 25px;
+
+	border-radius: 50px;
+
+	font-size: 14px;
+	font-weight: 700;
+
+	text-align: center;
+
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.admin-contact__home {
+	background-color: #ffffff;
+	color: #55745a;
+
+	border: 2px solid #9eb4a1;
+}
+
+.admin-contact__logout {
+	background-color: #5f7d68;
+	color: #ffffff;
+
+	border: 2px solid #5f7d68;
+}
+
+.admin-contact__home:hover,
+.admin-contact__logout:hover {
+	transform: translateY(-3px);
+}
+
+.admin-contact__logout:hover {
+	background-color: #486252;
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+	.admin-contact-page {
+		padding: 40px 12px 65px;
+	}
+
+	.admin-contact__heading {
+		flex-direction: column;
+
+		padding: 25px 20px;
+
+		text-align: center;
+	}
+
+	.admin-contact__icon {
+		width: 70px;
+		height: 70px;
+	}
+
+	.admin-contact__title {
+		font-size: 23px;
+	}
+
+	.admin-contact-card {
+		padding: 25px 18px;
+	}
+
+	.admin-contact-card__header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.admin-contact-card__row {
+		grid-template-columns: 1fr;
+
+		gap: 3px;
+	}
+
+	.admin-contact__buttons {
+		flex-direction: column;
+	}
+
+	.admin-contact__home,
+	.admin-contact__logout {
+		width: 100%;
+	}
+
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+	.admin-login-page {
+		padding: 45px 15px 70px;
+	}
+
+	.admin-login__box {
+		padding: 60px 25px 45px;
+
+		border-radius: 22px;
+	}
+
+	.admin-login__icon {
+		width: 95px;
+	}
+
+	.admin-login__title {
+		font-size: 24px;
+	}
+
+	.admin-login__input {
+		height: 50px;
+
+		font-size: 14px;
+	}
+
+	.admin-login__submit {
+		width: 100%;
+	}
+
+}

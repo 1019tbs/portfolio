@@ -507,6 +507,83 @@ a {
 		rgba(211, 87, 31, 0.3);
 }
 
+/* ========================================
+   学習したスキル一覧
+======================================== */
+
+.work-skills {
+	width: 100%;
+	max-width: 1200px;
+
+	margin:
+		0
+		auto
+		90px;
+
+	padding:
+		38px
+		45px;
+
+	background-color:
+		rgba(255, 255, 255, 0.88);
+
+	border:
+		1px
+		solid
+		rgba(79, 111, 82, 0.15);
+
+	border-radius: 30px;
+
+	box-shadow:
+		0
+		16px
+		40px
+		rgba(57, 75, 54, 0.11);
+
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+
+	text-align: center;
+}
+
+
+.work-skills__title {
+	margin:
+		0
+		0
+		30px;
+
+	color: #315f3f;
+
+	font-size: clamp(24px, 2.2vw, 32px);
+	font-weight: 700;
+
+	letter-spacing: 0.05em;
+}
+
+
+.work-skills__image-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+}
+
+
+.work-skills__image {
+	display: block;
+
+	width: 100%;
+	max-width: 1050px;
+	height: auto;
+
+	margin:
+		0
+		auto;
+
+	object-fit: contain;
+}
 
 /* ========================================
    GitHub一覧案内

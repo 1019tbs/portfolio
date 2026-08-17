@@ -111,22 +111,22 @@
 			</div>
 
 
-			<!-- エラーメッセージ -->
-			<c:if test="${not empty errorMsg}">
+<!--			 エラーメッセージ -->
+<!--			<c:if test="${not empty errorMsg}">-->
 
-				<div class="contact-message contact-message--error">
-					${errorMsg}</div>
+<!--				<div class="contact-message contact-message--error">-->
+<!--					${errorMsg}</div>-->
 
-			</c:if>
+<!--			</c:if>-->
 
 
-			<!-- 送信完了メッセージ -->
-			<c:if test="${not empty successMsg}">
+<!--			 送信完了メッセージ -->
+<!--			<c:if test="${not empty successMsg}">-->
 
-				<div class="contact-message contact-message--success">
-					${successMsg}</div>
+<!--				<div class="contact-message contact-message--success">-->
+<!--					${successMsg}</div>-->
 
-			</c:if>
+<!--			</c:if>-->
 
 
 			<form class="contact-form"
