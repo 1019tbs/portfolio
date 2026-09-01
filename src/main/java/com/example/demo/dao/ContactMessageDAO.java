@@ -16,13 +16,23 @@ import com.example.demo.model.ContactMessage;
 public class ContactMessageDAO {
 
 	private static final String JDBC_URL =
-			"jdbc:postgresql://localhost:5432/portfolio";
+	        System.getenv("DB_URL");
 
 	private static final String DB_USER =
-			"postgres";
+	        System.getenv("DB_USER");
 
 	private static final String DB_PASS =
-			"psql";
+	        System.getenv("DB_PASSWORD");
+	
+//	↓ローカル用
+//	private static final String JDBC_URL =
+//			"jdbc:postgresql://localhost:5432/portfolio";
+//
+//	private static final String DB_USER =
+//			"postgres";
+//
+//	private static final String DB_PASS =
+//			"psql";
 
 
 	// お問い合わせ内容を登録
