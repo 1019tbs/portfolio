@@ -91,14 +91,14 @@
 
 				</a> <a class="work-preview__item"
 					href="${pageContext.request.contextPath}/work#wcbcafe"> <img
-					src="${pageContext.request.contextPath}/image/wcbcafe.png"
+					src="${pageContext.request.contextPath}/image/WCBcafe.png"
 					alt="WCB CafeのWebサイト">
 
 					<p class="work-preview__item-title">WCB Cafe</p>
 
 				</a> <a class="work-preview__item"
 					href="${pageContext.request.contextPath}/work#edt"> <img
-					src="${pageContext.request.contextPath}/image/edt.png"
+					src="${pageContext.request.contextPath}/image/EDT.png"
 					alt="EDTアプリの画面">
 
 					<p class="work-preview__item-title">EDT</p>

@@ -30,7 +30,7 @@
 			<!-- Aboutタイトル -->
 			<div class="about-page__title">
 
-				<img src="${pageContext.request.contextPath}/image/About.png" alt="About"
+				<img src="${pageContext.request.contextPath}/image/about.png" alt="About"
 					class="about-page__title-image">
 
 			</div>
@@ -41,7 +41,7 @@
 
 				<div class="about-profile__image-area">
 
-					<img src="${pageContext.request.contextPath}/image/aboutMy.png" alt="田伏佑多のプロフィール写真"
+					<img src="${pageContext.request.contextPath}/image/aboutMy.PNG" alt="田伏佑多のプロフィール写真"
 						class="about-profile__image">
 
 				</div>
@@ -94,7 +94,7 @@
 
 					<div class="about-hobby__image-area">
 
-						<img src="${pageContext.request.contextPath}/image/bikeMy.png" alt="原付旅の写真"
+						<img src="${pageContext.request.contextPath}/image/bikeMy.PNG" alt="原付旅の写真"
 							class="about-hobby__image about-hobby__image--bike">
 
 					</div>
@@ -135,7 +135,7 @@
 
 					<div class="about-hobby__image-area">
 
-						<img src="${pageContext.request.contextPath}/image/drumMy.png" alt="ドラム演奏中の写真"
+						<img src="${pageContext.request.contextPath}/image/drumMy.PNG" alt="ドラム演奏中の写真"
 							class="about-hobby__image about-hobby__image--drum">
 
 					</div>
