@@ -134,7 +134,7 @@
 
 				<div class="work-card__image-area">
 
-					<img src="${pageContext.request.contextPath}/image/wcbcafe.png"
+					<img src="${pageContext.request.contextPath}/image/WCBcafe.png"
 						alt="WCB CafeのWebサイト" class="work-card__image">
 
 				</div>
@@ -213,7 +213,7 @@
 
 				<div class="work-card__image-area">
 
-					<img src="${pageContext.request.contextPath}/image/edt.png"
+					<img src="${pageContext.request.contextPath}/image/EDT.png"
 						alt="EDTアプリの画面" class="work-card__image">
 
 				</div>
