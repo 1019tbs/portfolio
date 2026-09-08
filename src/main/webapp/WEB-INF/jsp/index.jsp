@@ -6,6 +6,7 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>田伏佑多のPortfolio</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/common.css">
