@@ -134,6 +134,7 @@ public class ContactController {
 			return "contact";
 		}
 
+		contactMailService.sendNotification(contactMessage);
 		redirectAttributes.addFlashAttribute(
 				"successMsg",
 				"お問い合わせを送信しました。ありがとうございます。");
