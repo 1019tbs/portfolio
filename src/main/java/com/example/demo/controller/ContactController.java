@@ -9,16 +9,20 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.dao.ContactMessageDAO;
 import com.example.demo.model.ContactMessage;
+import com.example.demo.service.ContactMailService;
 
 @Controller
 public class ContactController {
 
 	private final ContactMessageDAO contactMessageDAO;
+	private final ContactMailService contactMailService;
 
 	public ContactController(
-			ContactMessageDAO contactMessageDAO) {
+			ContactMessageDAO contactMessageDAO,
+			ContactMailService contactMailService) {
 
 		this.contactMessageDAO = contactMessageDAO;
+		this.contactMailService = contactMailService;
 	}
 	
 	@GetMapping("/contact_Thankyou")
@@ -151,4 +155,5 @@ public class ContactController {
 		model.addAttribute("category", category);
 		model.addAttribute("message", message);
 	}
+	
 }
